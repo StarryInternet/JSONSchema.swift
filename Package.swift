@@ -11,11 +11,9 @@ let package = Package(
     .library(name: "JSONSchema", targets: ["JSONSchema"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/kylef/PathKit.git", .upToNextMajor(from: "1.0.0")),
-    .package(url: "https://github.com/kylef/Spectre.git", .revision("d02129a9af77729de049d328dd61e530b6f2bb2b"))
   ],
   targets: [
     .target(name: "JSONSchema", dependencies: [], path: "Sources"),
-    .testTarget(name: "JSONSchemaTests", dependencies: ["JSONSchema", "Spectre", "PathKit"]),
+    .testTarget(name: "JSONSchemaTests", dependencies: ["JSONSchema"]),
   ]
 )
